@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Header Setting</title>
+    <style>
+        .simple-table {
+            border-collapse: collapse;
+        }
+        .simple-table th {
+            border: 1px #a4a49f solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!--타겟 테이블-->
+    <table id="transactionList" class="simple-table"></table>
+
+    <!--데모-->
+    <script type="text/javascript" src="TableUtil.js"></script>
+    <script type="text/javascript">
+        const $table = document.querySelector('#transactionList');
+        const columns = [
+            [ 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 5.8 ]
+            , [ 'NO',  '환불대상', null, null, null, null, null,                                     '입금대상', null, null, null, null, null,                                '조정 금액', '상태', '등록일시', '업데이트일시']
+            , [ null,  '파트너ID', '파트너 유형', '파트너 명', '캐시 유형', '캐시 관리 명', '캐시 분담 명',   '파트너ID', '파트너 유형', '파트너 명', '캐시 유형', '캐시 관리 명', '캐시 분담 명' ]
+        ];
+        TableUtil.setHeader(columns, $table);
+    </script>
+
+</body>
+</html>
